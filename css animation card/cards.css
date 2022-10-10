@@ -1,0 +1,59 @@
+body{
+    background: rgb(74, 73, 73);
+    font-family: Verdana;
+}
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    font-size: 48px;
+}
+.card{
+    list-style-type: none;
+    padding: 0;
+}
+
+.card li{
+    position: relative;
+    width: 25%;
+    margin:0;
+    display: block;
+    box-sizing: border-box;
+    float: left
+}
+.card li div{
+    width:100%;
+    padding: 50% 0;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 0;
+    cursor: pointer;
+}
+/*//Animation Styles//*/
+
+.card div.back{
+    transform: rotateY(90deg);
+}
+.card div.front{
+    position: absolute;
+}
+.card li:hover div.front{
+    animation: twirl 0.2s ease-in forwards;
+}
+.card li:hover div.back{
+    animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+@keyframes twirl{
+    0%{transform: rotateY(0deg)}
+    100%{transform: rotateY(90deg)}
+}
+
+
